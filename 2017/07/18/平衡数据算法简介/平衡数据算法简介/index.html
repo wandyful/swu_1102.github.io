@@ -23,17 +23,17 @@
 <meta property="og:url" content="http://yoursite.com/2017/07/18/平衡数据算法简介/平衡数据算法简介/index.html">
 <meta property="og:site_name" content="王宇峰的博客">
 <meta property="og:description" content="[toc] 概述在数据挖掘中，经常会存在不平衡数据的分类问题，比如在提取环评信息中的总投资额，由于采样时反例的比例远远大于正例，因此想要达到良好的识别效果普通的分类算法还远远不够，这里介绍几种处理不平衡数据的常用方法及对比。迄今为止 , 解决不平衡分类问题的策略可以分为两大类 。一类是从训练集入手 , 通过改变训练集样本分布 ,降低不平衡程度 .另一类是从学习算法入手，根据算法在解决不平衡问题时的">
-<meta property="og:image" content="http://yoursite.com/2017/07/18/平衡数据算法简介/平衡数据算法简介/平衡数据算法简介/1502250121547.png">
+<meta property="og:image" content="http://yoursite.com/2017/07/18/平衡数据算法简介/平衡数据算法简介/source/平衡数据算法简介/1502250121547.png">
 <meta property="og:image" content="http://yoursite.com/2017/07/18/平衡数据算法简介/平衡数据算法简介/1502250656091.png">
 <meta property="og:image" content="http://yoursite.com/2017/07/18/平衡数据算法简介/平衡数据算法简介/1502250685260.png">
 <meta property="og:image" content="http://yoursite.com/2017/07/18/平衡数据算法简介/平衡数据算法简介/1502250713776.png">
 <meta property="og:image" content="http://yoursite.com/2017/07/18/平衡数据算法简介/平衡数据算法简介/1502250734299.png">
 <meta property="og:image" content="http://yoursite.com/2017/07/18/平衡数据算法简介/平衡数据算法简介/1502250882309.png">
-<meta property="og:updated_time" content="2017-08-09T06:15:28.808Z">
+<meta property="og:updated_time" content="2017-08-09T06:18:26.471Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="不平衡数据处理简介 | 王宇峰的博客">
 <meta name="twitter:description" content="[toc] 概述在数据挖掘中，经常会存在不平衡数据的分类问题，比如在提取环评信息中的总投资额，由于采样时反例的比例远远大于正例，因此想要达到良好的识别效果普通的分类算法还远远不够，这里介绍几种处理不平衡数据的常用方法及对比。迄今为止 , 解决不平衡分类问题的策略可以分为两大类 。一类是从训练集入手 , 通过改变训练集样本分布 ,降低不平衡程度 .另一类是从学习算法入手，根据算法在解决不平衡问题时的">
-<meta name="twitter:image" content="http://yoursite.com/2017/07/18/平衡数据算法简介/平衡数据算法简介/平衡数据算法简介/1502250121547.png">
+<meta name="twitter:image" content="http://yoursite.com/2017/07/18/平衡数据算法简介/平衡数据算法简介/source/平衡数据算法简介/1502250121547.png">
     
     
     
@@ -190,7 +190,7 @@ classes that you can use:
 <li>计算点p在少类样本中的k个最近邻</li>
 <li>有放回地随机抽取R≤k个邻居</li>
 <li>对这R个点，每一个点与点p可以组成一条直线，然后在这条直线上随机取一个点，就产生了一个新的样本，一共可以这样做从而产生R个新的点。</li>
-<li>将这些新的点加入少类样本中<br><img src="./平衡数据算法简介/1502250121547.png" alt="Alt text"><h4 id="Borderline-SMOTE1"><a href="#Borderline-SMOTE1" class="headerlink" title="Borderline-SMOTE1"></a>Borderline-SMOTE1</h4>对于少数类中的某一点P<ol>
+<li>将这些新的点加入少类样本中<br><img src="./source/平衡数据算法简介/1502250121547.png" alt="Alt text"><h4 id="Borderline-SMOTE1"><a href="#Borderline-SMOTE1" class="headerlink" title="Borderline-SMOTE1"></a>Borderline-SMOTE1</h4>对于少数类中的某一点P<ol>
 <li>计算点p在训练集T上的m个最近邻。我们称这个集合为Mp然后设 m’= |Mp ∩ L| (表示点p的最近邻中属于L的数量).</li>
 <li>If m’= m, p 是一个噪声,不做任何操作.</li>
 <li>If 0 ≤m’≤m/2, 则说明p很安全，不做任何操作.</li>
